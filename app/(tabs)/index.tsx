@@ -1,10 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import useTheme from "@/hooks/useTheme";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
+  const { toggleDarkMore } = useTheme();
   return (
     <View style={styles.container}>
       <Text style={styles.content}>Shamuvel Jadhav.</Text>
       <Text>Hi</Text>
+      <TouchableOpacity onPress={toggleDarkMore}>
+        <Text>toggle the mode</Text>
+      </TouchableOpacity>
     </View>
   );
 }
